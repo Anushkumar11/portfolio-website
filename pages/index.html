@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anush Kumar | Full Stack Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="/styles/nav.css">
+    <link rel="stylesheet" href="/styles/typingAnimation.css">
+    <link rel="stylesheet" href="/styles/style.css">
+    <script>
+        tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        primary: "#6366f1",
+        secondary: "#a855f7",
+      },
+      borderRadius: {
+        "4xl": "2rem",
+      },
+    },
+  },
+};
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300 min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 glass-card border-b border-slate-200 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <a href="index.html"><div class="flex items-center space-x-3 cursor-pointer">
+                    <div class="w-10 h-10 gradient-bg rounded-xl flex items-center justify-center text-white font-bold text-lg shadow-lg">A</div>
+                    <span class="text-xl font-bold tracking-tight hidden sm:block">Anush Kumar</span>
+                </div></a>
+
+                <div class="hidden md:flex space-x-6 items-center">
+                    <a href="index.html"><button class="nav-link active py-2 hover:text-primary transition-colors">Home</button></a>
+                    <a href="about.html"><button class="nav-link py-2 hover:text-primary transition-colors">About</button></a>
+                    <a href="skills.html"><button class="nav-link py-2 hover:text-primary transition-colors">Skills</button></a>
+                    <a href="services.html"><button class="nav-link py-2 hover:text-primary transition-colors">Services</button></a>
+                    <a href="project.html"><button class="nav-link py-2 hover:text-primary transition-colors">Projects</button></a>
+                    <a href="blog.html"><button class="nav-link py-2 hover:text-primary transition-colors">Blog</button></a>
+                    <a href="contact.html"><button class="nav-link py-2 hover:text-primary transition-colors">Contact</button></a>
+                    <div class="h-6 w-px bg-slate-200 dark:bg-slate-800 mx-2"></div>
+                    <button id="theme-toggle" class="p-2.5 rounded-xl hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors">
+                        <i data-lucide="sun" id="sun-icon" class="hidden w-5 h-5"></i>
+                        <i data-lucide="moon" id="moon-icon" class="w-5 h-5"></i>
+                    </button>
+                </div>
+
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="p-2">
+                        <i data-lucide="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden glass-card absolute w-full border-b dark:border-slate-800 shadow-xl">
+            <div class="px-4 py-6 space-y-4 text-center">
+                <a href="index.html"><button class="block w-full py-2 font-medium">Home</button></a>
+                <a href="about.html"><button class="block w-full py-2 font-medium">About</button></a>
+                <a href="skills.html"><button class="block w-full py-2 font-medium">Skills</button></a>
+                <a href="services.html"><button class="block w-full py-2 font-medium">Services</button></a>
+                <a href="project.html"><button class="block w-full py-2 font-medium">Projects</button></a>
+                <a href="blog.html"><button class="block w-full py-2 font-medium">Blog</button></a>
+                <a href="contact.html"><button class="block w-full py-2 font-medium">Contact</button></a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-24">
+        <!-- HOME SECTION -->
+        <section id="home">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-24 flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2 space-y-8 text-center md:text-left">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-indigo-100 dark:bg-indigo-900/30 text-primary font-semibold text-sm">
+                        <span class="relative flex h-2 w-2">
+                          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
+                          <span class="relative inline-flex rounded-full h-2 w-2 bg-indigo-500"></span>
+                        </span>
+                        Available for Work
+                    </div>
+                    <h1 class="text-5xl md:text-7xl font-extrabold leading-[1.1] tracking-tight">
+                        I'm <span class="gradient-text">Anush Kumar</span><br>
+                        <span id="typing-text" class="text-3xl md:text-5xl text-slate-600 dark:text-slate-400 font-bold"></span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-slate-600 dark:text-slate-400 max-w-xl leading-relaxed">
+                        Full Stack Developer specializing in the MERN stack and AI integrations. I turn complex problems into elegant digital solutions.
+                    </p>
+                    <div class="flex flex-wrap justify-center md:justify-start gap-5 pt-4">
+                        <button onclick="showPage('projects')" class="px-8 py-4 rounded-2xl gradient-bg text-white font-bold hover:shadow-2xl hover:scale-105 transition-all flex items-center gap-2">
+                            View Portfolio <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                        </button>
+                        <button class="px-8 py-4 rounded-2xl border-2 border-slate-200 dark:border-slate-800 font-bold hover:bg-slate-100 dark:hover:bg-slate-800 transition-all">
+                            Get in Touch
+                        </button>
+                    </div>
+                </div>
+                <!-- REDESIGNED STAGE FOR TRANSPARENT IMAGE -->
+                <div class="md:w-1/2 flex justify-center items-center py-10 relative">
+                    <div class="hero-visual-wrapper">
+                        <!-- Background Effects -->
+                        <div class="tech-aura"></div>
+                        <div class="ring-decor w-[300px] h-[300px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 animate-[spin_20s_linear_infinite]"></div>
+                        <div class="ring-decor w-[400px] h-[400px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 animate-[spin_30s_linear_infinite_reverse]"></div>
+                        
+                        <!-- Floating Badges -->
+                        <div class="tech-badge-float top-10 right-10" style="animation-delay: 0s">
+                            <i data-lucide="code-2" class="w-4 h-4 text-blue-500"></i> MERN Stack
+                        </div>
+                        <div class="tech-badge-float top-1/2 -left-4" style="animation-delay: -2s">
+                            <i data-lucide="database" class="w-4 h-4 text-green-500"></i> MongoDB
+                        </div>
+                        <div class="tech-badge-float bottom-20 right-0" style="animation-delay: -1s">
+                            <i data-lucide="sparkles" class="w-4 h-4 text-purple-500"></i> AI Developer
+                        </div>
+
+                        <!-- Main Profile Stage -->
+                        <div class="profile-stage">
+                            <div class="main-img-wrap">
+                                <!-- Your new background-free image -->
+                                <img src="https://lh3.googleusercontent.com/d/1dZvviyQrZBjnt67pW8wCXsiYJ_kQfwZl" alt="Anush Kumar" class="w-full h-auto max-w-[400px]">
+                            </div>
+                            <!-- Glass Pedestal Illustration -->
+                            <div class="glass-pedestal"></div>
+                        </div>
+
+                        <!-- Orbiting Element -->
+                        <div class="absolute w-[115%] h-[115%] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 border border-dashed border-indigo-200 dark:border-indigo-900/40 rounded-full animate-[spin_25s_linear_infinite]">
+                             <div class="absolute top-0 left-1/2 -translate-x-1/2 w-4 h-4 bg-indigo-500 rounded-full shadow-[0_0_20px_rgba(99,102,241,0.8)]"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            
+            <!-- Quick Stats -->
+            <div class="max-w-7xl mx-auto px-4 py-16 border-b border-slate-100 dark:border-slate-900">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                    <div class="glass-card p-8 rounded-3xl text-center border-b-4 border-indigo-500">
+                        <div class="text-4xl font-black text-indigo-500 mb-2">1.5+</div>
+                        <div class="text-sm font-bold text-slate-500 uppercase tracking-tighter">Years of Experience</div>
+                    </div>
+                    <div class="glass-card p-8 rounded-3xl text-center border-b-4 border-purple-500">
+                        <div class="text-4xl font-black text-purple-500 mb-2">20+</div>
+                        <div class="text-sm font-bold text-slate-500 uppercase tracking-tighter">Projects Completed</div>
+                    </div>
+                    <div class="glass-card p-8 rounded-3xl text-center border-b-4 border-emerald-500">
+                        <div class="text-4xl font-black text-emerald-500 mb-2">8 Mo</div>
+                        <div class="text-sm font-bold text-slate-500 uppercase tracking-tighter">Teaching Exp</div>
+                    </div>
+                    <div class="glass-card p-8 rounded-3xl text-center border-b-4 border-amber-500">
+                        <div class="text-4xl font-black text-amber-500 mb-2">AI</div>
+                        <div class="text-sm font-bold text-slate-500 uppercase tracking-tighter">MERN Integration</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonials Section -->
+            <div class="max-w-7xl mx-auto px-4 py-24">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold mb-4 italic">Client <span class="gradient-text">Feedback</span></h2>
+                    <p class="text-slate-500">What people say about working with me.</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="glass-card p-8 rounded-4xl relative">
+                        <i data-lucide="quote" class="absolute top-6 right-8 w-10 h-10 text-indigo-100 dark:text-slate-800 -z-10"></i>
+                        <div class="flex text-amber-400 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                        <p class="text-slate-600 dark:text-slate-400 mb-6 italic">"Anush transformed our manual inventory process into a seamless AI-driven system. His MERN skills are top-notch!"</p>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full gradient-bg flex items-center justify-center text-white font-bold">JD</div>
+                            <div>
+                                <h4 class="font-bold text-sm">John Doe</h4>
+                                <p class="text-xs text-slate-500">CEO, TechFlow Solutions</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="glass-card p-8 rounded-4xl relative">
+                        <i data-lucide="quote" class="absolute top-6 right-8 w-10 h-10 text-indigo-100 dark:text-slate-800 -z-10"></i>
+                        <div class="flex text-amber-400 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                        <p class="text-slate-600 dark:text-slate-400 mb-6 italic">"A highly dedicated developer. He not only builds great software but also understands the business logic perfectly."</p>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full gradient-bg flex items-center justify-center text-white font-bold">SA</div>
+                            <div>
+                                <h4 class="font-bold text-sm">Sara Ahmed</h4>
+                                <p class="text-xs text-slate-500">Project Manager, AUM</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="glass-card p-8 rounded-4xl relative">
+                        <i data-lucide="quote" class="absolute top-6 right-8 w-10 h-10 text-indigo-100 dark:text-slate-800 -z-10"></i>
+                        <div class="flex text-amber-400 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                        <p class="text-slate-600 dark:text-slate-400 mb-6 italic">"As an instructor, Anush has a unique way of explaining complex coding concepts to beginners. Truly inspiring."</p>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full gradient-bg flex items-center justify-center text-white font-bold">MK</div>
+                            <div>
+                                <h4 class="font-bold text-sm">M. Khan</h4>
+                                <p class="text-xs text-slate-500">Director, Muslim Hands Academy</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Section -->
+            <div class="max-w-4xl mx-auto px-4 py-24">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold mb-4">Frequently Asked <span class="gradient-text">Questions</span></h2>
+                    <p class="text-slate-500">Clear answers to common inquiries.</p>
+                </div>
+                <div class="space-y-4">
+                    <div class="faq-item glass-card rounded-2xl overflow-hidden cursor-pointer active" onclick="toggleFaq(this)">
+                        <div class="p-6 flex justify-between items-center">
+                            <h3 class="font-bold text-lg">What is your typical project timeline?</h3>
+                            <i data-lucide="chevron-down" class="faq-icon w-5 h-5 transition-transform duration-300"></i>
+                        </div>
+                        <div class="faq-answer px-6">
+                            <p class="text-slate-500">Timeline depends on project complexity. Small websites typically take 1-2 weeks, while full-scale MERN applications range from 4-8 weeks.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item glass-card rounded-2xl overflow-hidden cursor-pointer" onclick="toggleFaq(this)">
+                        <div class="p-6 flex justify-between items-center">
+                            <h3 class="font-bold text-lg">Do you offer post-launch support?</h3>
+                            <i data-lucide="chevron-down" class="faq-icon w-5 h-5 transition-transform duration-300"></i>
+                        </div>
+                        <div class="faq-answer px-6">
+                            <p class="text-slate-500">Yes, I provide 30 days of free support after launch and offer flexible maintenance packages for long-term updates.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item glass-card rounded-2xl overflow-hidden cursor-pointer" onclick="toggleFaq(this)">
+                        <div class="p-6 flex justify-between items-center">
+                            <h3 class="font-bold text-lg">Can you integrate AI into my existing app?</h3>
+                            <i data-lucide="chevron-down" class="faq-icon w-5 h-5 transition-transform duration-300"></i>
+                        </div>
+                        <div class="faq-answer px-6">
+                            <p class="text-slate-500">Absolutely! I specialize in integrating Gemini API and OpenAI into existing React or Node.js apps to add smart features.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item glass-card rounded-2xl overflow-hidden cursor-pointer" onclick="toggleFaq(this)">
+                        <div class="p-6 flex justify-between items-center">
+                            <h3 class="font-bold text-lg">Are you available for remote work?</h3>
+                            <i data-lucide="chevron-down" class="faq-icon w-5 h-5 transition-transform duration-300"></i>
+                        </div>
+                        <div class="faq-answer px-6">
+                            <p class="text-slate-500">Yes, I am available for freelance projects and remote full-time opportunities worldwide.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="mt-20 py-12 glass-card border-t border-slate-200 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="flex items-center space-x-3">
+                <div class="w-8 h-8 gradient-bg rounded-lg flex items-center justify-center text-white font-bold text-sm">A</div>
+                <span class="text-lg font-bold">Anush Kumar</span>
+            </div>
+            <div class="flex space-x-6">
+                <a href="#" class="p-2 bg-slate-100 dark:bg-slate-800 rounded-full hover:text-primary transition-all"><i data-lucide="github" class="w-5 h-5"></i></a>
+                <a href="#" class="p-2 bg-slate-100 dark:bg-slate-800 rounded-full hover:text-primary transition-all"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+                <a href="#" class="p-2 bg-slate-100 dark:bg-slate-800 rounded-full hover:text-primary transition-all"><i data-lucide="mail" class="w-5 h-5"></i></a>
+            </div>
+            <p class="text-sm text-slate-500">© 2026 Anush Kumar. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/javascripts/script.js"></script>
+    <script src="/javascripts/typingAnimation.js"></script>
+     <script src="/javascripts/darkMode.js"></script>
+     <script src="/javascripts/FAQ.js"></script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anush Kumar | Full Stack Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="/styles/nav.css">
+    <script>
+        tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        primary: "#6366f1",
+        secondary: "#a855f7",
+      },
+      borderRadius: {
+        "4xl": "2rem",
+      },
+    },
+  },
+};
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300 min-h-screen">
+
+      <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 glass-card border-b border-slate-200 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <a href="index.html"><div class="flex items-center space-x-3 cursor-pointer">
+                    <div class="w-10 h-10 gradient-bg rounded-xl flex items-center justify-center text-white font-bold text-lg shadow-lg">A</div>
+                    <span class="text-xl font-bold tracking-tight hidden sm:block">Anush Kumar</span>
+                </div></a>
+
+                <div class="hidden md:flex space-x-6 items-center">
+                    <a href="index.html"><button class="nav-link py-2 hover:text-primary transition-colors">Home</button></a>
+                    <a href="about.html"><button class="nav-link active py-2 hover:text-primary transition-colors">About</button></a>
+                    <a href="skills.html"><button class="nav-link py-2 hover:text-primary transition-colors">Skills</button></a>
+                    <a href="services.html"><button class="nav-link py-2 hover:text-primary transition-colors">Services</button></a>
+                    <a href="project.html"><button class="nav-link py-2 hover:text-primary transition-colors">Projects</button></a>
+                    <a href="blog.html"><button class="nav-link py-2 hover:text-primary transition-colors">Blog</button></a>
+                    <a href="contact.html"><button class="nav-link py-2 hover:text-primary transition-colors">Contact</button></a>
+                    <div class="h-6 w-px bg-slate-200 dark:bg-slate-800 mx-2"></div>
+                    <button id="theme-toggle" class="p-2.5 rounded-xl hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors">
+                        <i data-lucide="sun" id="sun-icon" class="hidden w-5 h-5"></i>
+                        <i data-lucide="moon" id="moon-icon" class="w-5 h-5"></i>
+                    </button>
+                </div>
+
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="p-2">
+                        <i data-lucide="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden glass-card absolute w-full border-b dark:border-slate-800 shadow-xl">
+            <div class="px-4 py-6 space-y-4 text-center">
+                <a href="index.html"><button class="block w-full py-2 font-medium">Home</button></a>
+                <a href="about.html"><button class="block w-full py-2 font-medium">About</button></a>
+                <a href="skills.html"><button class="block w-full py-2 font-medium">Skills</button></a>
+                <a href="services.html"><button class="block w-full py-2 font-medium">Services</button></a>
+                <a href="project.html"><button class="block w-full py-2 font-medium">Projects</button></a>
+                <a href="blog.html"><button class="block w-full py-2 font-medium">Blog</button></a>
+                <a href="contact.html"><button class="block w-full py-2 font-medium">Contact</button></a>
+            </div>
+        </div>
+    </nav>
+    
+    <main class="pt-24">
+        <!-- ABOUT SECTION -->
+        <section id="about" class="py-20 max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Professional <span class="gradient-text">Journey</span></h2>
+                <div class="w-20 h-1.5 gradient-bg mx-auto rounded-full"></div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-16 items-start">
+                <div class="space-y-6">
+                    <h3 class="text-2xl font-bold">Summary</h3>
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-lg">
+                        I am a dedicated MERN Stack Developer with a passion for building scalable web applications. My journey includes practical experience in software houses and educational institutions, allowing me to bridge the gap between technical execution and knowledge sharing.
+                    </p>
+                    <div class="p-6 bg-indigo-50 dark:bg-indigo-950/20 rounded-3xl border border-indigo-100 dark:border-indigo-900/50">
+                        <p class="italic text-indigo-700 dark:text-indigo-300">"My mission is to leverage AI and modern web frameworks to create high-impact software that solves real-world problems."</p>
+                    </div>
+                </div>
+                <div class="space-y-8">
+                    <h3 class="text-2xl font-bold">Experience</h3>
+                    <div class="relative border-l-2 border-slate-200 dark:border-slate-800 ml-4 space-y-12">
+                        <div class="relative pl-10">
+                            <div class="absolute w-5 h-5 gradient-bg rounded-full -left-[11px] top-1 shadow-lg border-4 border-white dark:border-slate-950"></div>
+                            <span class="text-xs font-bold text-primary uppercase bg-indigo-50 dark:bg-indigo-900/30 px-3 py-1 rounded-full">Current</span>
+                            <h4 class="text-xl font-bold mt-2">Web Developer</h4>
+                            <p class="font-semibold text-slate-700 dark:text-slate-300">AUM Software Company</p>
+                            <p class="text-sm text-slate-500 mt-2">Developing enterprise-level web applications using MongoDB, Express, React, and Node.js. Focus on performance optimization and user experience.</p>
+                        </div>
+                        <div class="relative pl-10">
+                            <div class="absolute w-5 h-5 bg-slate-300 dark:bg-slate-700 rounded-full -left-[11px] top-1 border-4 border-white dark:border-slate-950"></div>
+                            <span class="text-xs font-bold text-slate-500 uppercase bg-slate-100 dark:bg-slate-800 px-3 py-1 rounded-full">8 Months</span>
+                            <h4 class="text-xl font-bold mt-2">IT Instructor</h4>
+                            <p class="font-semibold text-slate-700 dark:text-slate-300">Muslim Hands Academy Quetta</p>
+                            <p class="text-sm text-slate-500 mt-2">Designed curriculum and trained students in web development, database management, and basic programming logic.</p>
+                        </div>
+                        <div class="relative pl-10">
+                            <div class="absolute w-5 h-5 bg-slate-300 dark:bg-slate-700 rounded-full -left-[11px] top-1 border-4 border-white dark:border-slate-950"></div>
+                            <span class="text-xs font-bold text-slate-500 uppercase bg-slate-100 dark:bg-slate-800 px-3 py-1 rounded-full">1.5 Years</span>
+                            <h4 class="text-xl font-bold mt-2">Computer Operator</h4>
+                            <p class="font-semibold text-slate-700 dark:text-slate-300">LU Biscuits Company</p>
+                            <p class="text-sm text-slate-500 mt-2">Managed high-volume data entry, inventory systems, and operational reporting for one of Pakistan's leading food brands.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="mt-20 py-12 glass-card border-t border-slate-200 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="flex items-center space-x-3">
+                <div class="w-8 h-8 gradient-bg rounded-lg flex items-center justify-center text-white font-bold text-sm">A</div>
+                <span class="text-lg font-bold">Anush Kumar</span>
+            </div>
+            <div class="flex space-x-6">
+                <a href="#" class="p-2 bg-slate-100 dark:bg-slate-800 rounded-full hover:text-primary transition-all"><i data-lucide="github" class="w-5 h-5"></i></a>
+                <a href="#" class="p-2 bg-slate-100 dark:bg-slate-800 rounded-full hover:text-primary transition-all"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+                <a href="#" class="p-2 bg-slate-100 dark:bg-slate-800 rounded-full hover:text-primary transition-all"><i data-lucide="mail" class="w-5 h-5"></i></a>
+            </div>
+            <p class="text-sm text-slate-500">© 2026 Anush Kumar. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/javascripts/script.js"></script>
+        <script src="/javascripts/darkMode.js"></script>
+</body>
+</html>
